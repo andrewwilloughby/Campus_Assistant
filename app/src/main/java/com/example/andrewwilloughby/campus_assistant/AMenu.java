@@ -14,6 +14,8 @@ public abstract class AMenu extends AppCompatActivity {
 
     protected ImageButton safetyBtn;
     protected ImageButton settingsBtn;
+    protected ImageButton viewStyleBtn;
+    public int MENU_MODE = 1;
 
     protected void initialiseSafetySettingsBtns(){
         safetyBtn = (ImageButton) findViewById(R.id.safetyBtn);
@@ -27,6 +29,19 @@ public abstract class AMenu extends AppCompatActivity {
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
                 launchActivity("settings");
+            }
+        });
+
+        viewStyleBtn = (ImageButton) findViewById(R.id.viewStyleBtn);
+        viewStyleBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                if(MENU_MODE == 1){
+                    viewStyleBtn.setImageResource(R.drawable.grid_icon);
+                    MENU_MODE = 2;
+                } else if(MENU_MODE == 2){
+                    viewStyleBtn.setImageResource(R.drawable.list_icon);
+                    MENU_MODE = 1;
+                }
             }
         });
     }
