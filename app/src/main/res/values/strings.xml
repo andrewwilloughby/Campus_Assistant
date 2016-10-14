@@ -25,6 +25,8 @@
     <string name="campusNavMenuTitle">Campus Navigation</string>
     <string name="travelInfoMenuTitle">Travel Information</string>
     <string name="bbEmailMenuTitle">Blackboard &amp; Email</string>
+    <string name="MenuViewToggleBtnList">List</string>
+    <string name="MenuViewToggleBtnGrid">Grid</string>
 
     <!-- Strings related to Settings -->
 
