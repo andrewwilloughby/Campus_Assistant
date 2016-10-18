@@ -27,9 +27,11 @@
         <activity android:name=".SafetyInfo" />
         <activity android:name=".Settings" />
         <activity android:name=".WebpageView" />
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="0f20978bca22528883025bd082b804abbdfd0415" />
+
     </application>
 
 </manifest>

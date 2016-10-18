@@ -19,10 +19,10 @@ public class BBEmailMenu extends AMenu {
 
         blackboardBtn = (Button) findViewById(R.id.bbemailMenuBlackboardBtn);
         blackboardBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("https://bb.reading.ac.uk/", "Blackboard"); } });
+            public void onClick(View view){ launchWebView("Blackboard"); } });
 
         emailBtn = (Button) findViewById(R.id.bbemailMenuEmailBtn);
         emailBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("http://mail.live.reading.ac.uk/", "University Email"); } });
+            public void onClick(View view){ launchWebView("University Email"); } });
     }
 }

@@ -22,22 +22,22 @@ public class StudentInfoMenu extends AMenu {
 
         studentServicesBtn = (Button) findViewById(R.id.studentInfoServicesBtn);
         studentServicesBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("https://student.reading.ac.uk/", "Student Services"); } });
+            public void onClick(View view){ launchWebView("Student Services"); } });
 
         libraryBtn = (Button) findViewById(R.id.studentInfoLibraryBtn);
         libraryBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("http://www.reading.ac.uk/library/", "Library"); } });
+            public void onClick(View view){ launchWebView("Library"); } });
 
         paymentsBtn = (Button) findViewById(R.id.studentInfoPaymentsBtn);
         paymentsBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("https://www.webpay.reading.ac.uk/studentpayments/", "University Payments"); } });
+            public void onClick(View view){ launchWebView("University Payments"); } });
 
         risisBtn = (Button) findViewById(R.id.studentInfoRisisBtn);
         risisBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("https://www.risisweb.reading.ac.uk/", "RISIS"); } });
+            public void onClick(View view){ launchWebView("RISIS"); } });
 
         staffDirectoryBtn = (Button) findViewById(R.id.studentInfoStaffDirectoryBtn);
         staffDirectoryBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("https://www.reading.ac.uk/search/search-staff.aspx", "Search Staff"); } });
+            public void onClick(View view){ launchWebView("Staff Search"); } });
     }
 }
