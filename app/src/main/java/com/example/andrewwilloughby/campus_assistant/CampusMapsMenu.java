@@ -20,15 +20,15 @@ public class CampusMapsMenu extends AMenu {
 
         whiteknightsBtn = (Button) findViewById(R.id.campusMapsMenuWhiteknightsBtn);
         whiteknightsBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("http://www.reading.ac.uk/web/FILES/whiteknights-campus-map-and-keys-2016.pdf", "Whiteknights Campus Map"); } });
+            public void onClick(View view){ launchWebView("Whiteknights Campus Map"); } });
 
         loroBtn = (Button) findViewById(R.id.campusMapsLoroBtn);
         loroBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("http://www.reading.ac.uk/web/FILES/University-of-Reading-London-Road-COLOUR-NUMERIC.pdf", "London Road Campus Map"); } });
+            public void onClick(View view){ launchWebView("London Road Campus Map"); } });
 
         hallsBtn = (Button) findViewById(R.id.campusMapsHallsBtn);
         hallsBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("https://www.reading.ac.uk/web/FILES/accommodation/Walking_distances_to_halls.pdf", "Halls Map"); } });
+            public void onClick(View view){ launchWebView("Student Halls Map"); } });
 
     }
 }

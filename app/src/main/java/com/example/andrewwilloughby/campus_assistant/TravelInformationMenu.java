@@ -20,18 +20,22 @@ public class TravelInformationMenu extends AMenu {
 
         busTimesBtn = (Button) findViewById(R.id.travelInfoBusTimesBtn);
         busTimesBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){
+            public void onClick(View view) {
             }
         });
 
         railTimesBtn = (Button) findViewById(R.id.travelInfoRailTimesBtn);
         railTimesBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){
+            public void onClick(View view) {
             }
         });
 
         busTimetableBtn = (Button) findViewById(R.id.travelInfoBusTimetableBtn);
         busTimetableBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){ launchWebView("http://www.reading-buses.co.uk/files/timetables/current/claret%20times.pdf", "University Bus Timetable"); } });
+            public void onClick(View view) {
+                launchWebView("University Bus Timetable");
+            }
+        });
+
     }
 }

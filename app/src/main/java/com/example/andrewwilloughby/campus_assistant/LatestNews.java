@@ -3,6 +3,7 @@ package com.example.andrewwilloughby.campus_assistant;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.twitter.sdk.android.core.Callback;
@@ -14,6 +15,9 @@ import com.twitter.sdk.android.tweetui.TweetTimelineListAdapter;
 import com.twitter.sdk.android.tweetui.UserTimeline;
 
 public class LatestNews extends AppCompatActivity {
+
+    private Button uorButton;
+    private Button rusuButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

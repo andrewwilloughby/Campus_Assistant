@@ -27,8 +27,52 @@
     <string name="bbEmailMenuTitle">Blackboard &amp; Email</string>
     <string name="MenuViewToggleBtnList">List</string>
     <string name="MenuViewToggleBtnGrid">Grid</string>
+    <string name="uorTweetsBtnText">UoR Tweets</string>
+    <string name="rusuTweetsBtnText">RUSU Tweets</string>
 
-    <!-- Strings related to Settings -->
+    <string-array name="menuCategories">
+        <item>Student Information</item>
+        <item>Latest News</item>
+        <item>Campus Navigation</item>
+        <item>Travel Information</item>
+        <item>Blackboard &amp; Email</item>
+        <item>Timetable</item>
+    </string-array>
+
+    <string-array name="studentInfoItems">
+        <item>Student Services</item>
+        <item>Library</item>
+        <item>University Payments</item>
+        <item>RISIS</item>
+        <item>Staff Search</item>
+    </string-array>
+
+    <string-array name="latestNewsItems">
+        <item>Latest Tweets</item>
+    </string-array>
+
+    <string-array name="campusNavigationItems">
+        <item>Interactive Google Map</item>
+        <item>Whiteknights Campus Map</item>
+        <item>London Road Campus Map</item>
+        <item>Student Halls Map</item>
+    </string-array>
+
+    <string-array name="travelInformationItems">
+        <item>Live Bus Times</item>
+        <item>Live Train Times</item>
+        <item>University Bus Timetable</item>
+    </string-array>
+
+    <string-array name="bbEmailItems">
+        <item>Blackboard</item>
+        <item>University Email</item>
+    </string-array>
+
+    <string-array name="timetableItems">
+        <item>Student Timetable</item>
+    </string-array>
+
 
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
