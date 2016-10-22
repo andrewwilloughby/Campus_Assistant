@@ -1,6 +1,8 @@
 package com.example.andrewwilloughby.campus_assistant;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListAdapter;
@@ -48,10 +50,9 @@ public class MainActivity extends AMenu {
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
         Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_main);
+        final LinearLayout gridLayout = (LinearLayout) findViewById(R.id.gridLayout);
 
         initialiseSafetySettingsBtns();
-
-        final LinearLayout gridLayout = (LinearLayout) findViewById(R.id.gridLayout);
 
         viewStyleBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
@@ -139,7 +140,6 @@ public class MainActivity extends AMenu {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 final String selected = (String) adapter.getChild(groupPosition, childPosition);
-
                 switch (selected){
                     case "Student Services":
                         launchWebView(selected);
@@ -205,4 +205,26 @@ public class MainActivity extends AMenu {
             }
         });
     }
+
+    boolean doubleBackToExitPressedOnce = false;
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Click Back button again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+    }
+
 }

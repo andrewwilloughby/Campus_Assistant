@@ -27,6 +27,8 @@
     <string name="bbEmailMenuTitle">Blackboard &amp; Email</string>
     <string name="MenuViewToggleBtnList">List</string>
     <string name="MenuViewToggleBtnGrid">Grid</string>
+    <string name="uorTweetsBtnText">UoR Tweets</string>
+    <string name="rusuTweetsBtnText">RUSU Tweets</string>
 
     <string-array name="menuCategories">
         <item>Student Information</item>

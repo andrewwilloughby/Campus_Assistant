@@ -1,5 +1,6 @@
 package com.example.andrewwilloughby.campus_assistant;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,7 +15,7 @@ public abstract class AMenu extends AppCompatActivity {
     protected ImageButton safetyBtn;
     protected ImageButton settingsBtn;
     protected ImageButton viewStyleBtn;
-    public int MENU_MODE = 1;
+    public int MENU_MODE = 2;
 
     protected void initialiseSafetySettingsBtns(){
         safetyBtn = (ImageButton) findViewById(R.id.safetyBtn);
@@ -37,6 +38,7 @@ public abstract class AMenu extends AppCompatActivity {
                 if(MENU_MODE == 1){
                     viewStyleBtn.setImageResource(R.drawable.grid_icon);
                     MENU_MODE = 2;
+                    launchActivity("main menu");
                 } else if(MENU_MODE == 2){
                     viewStyleBtn.setImageResource(R.drawable.list_icon);
                     MENU_MODE = 1;
@@ -48,6 +50,10 @@ public abstract class AMenu extends AppCompatActivity {
     protected void launchActivity(String activityName){
         Intent intent = null;
         switch (activityName){
+            case "main menu":
+                intent = new Intent(this, MainActivity.class);
+                intent.putExtra("listmode", true);
+                break;
             case "student info menu":
                 intent = new Intent(this, StudentInfoMenu.class);
                 break;

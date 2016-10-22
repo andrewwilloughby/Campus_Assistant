@@ -51,7 +51,7 @@
 
                 <ImageButton
                     android:layout_height="30dp"
-                    app:srcCompat="@drawable/list_icon"
+                    app:srcCompat="@drawable/grid_icon"
                     android:layout_weight="1"
                     android:layout_width="30dp"
                     android:background="@android:color/transparent"
@@ -107,7 +107,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
+            android:visibility="gone"
             android:id="@+id/gridLayout">
 
             <LinearLayout
@@ -222,7 +222,7 @@
             android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
             android:divider="#000000"
             android:dividerHeight="0.5dp"
-            android:visibility="gone"></ExpandableListView>
+            android:visibility="visible"></ExpandableListView>
 
 
     </LinearLayout>
