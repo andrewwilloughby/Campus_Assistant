@@ -9,7 +9,7 @@
     <string name="studentInfoLibraryBtnText">Library</string>
     <string name="studentInfoPaymentsBtnText">Payments</string>
     <string name="studentInfoRisisBtnText">RISIS</string>
-    <string name="studentInfoStaffDirectoryBtnText">Staff Directory</string>
+    <string name="studentInfoStaffDirectoryBtnText">Staff Search</string>
     <string name="mainTimetableBtnText">Timetable</string>
     <string name="campusNavInteractiveMapBtnText">Interactive Map</string>
     <string name="campusNavMapsBtnText">Campus Maps</string>
@@ -29,6 +29,7 @@
     <string name="MenuViewToggleBtnGrid">Grid</string>
     <string name="uorTweetsBtnText">UoR Tweets</string>
     <string name="rusuTweetsBtnText">RUSU Tweets</string>
+    <string name="trainDepHeaderText">Departures from Reading (RDG) Station:</string>
 
     <string-array name="menuCategories">
         <item>Student Information</item>

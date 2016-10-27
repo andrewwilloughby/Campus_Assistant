@@ -27,6 +27,7 @@ public class TravelInformationMenu extends AMenu {
         railTimesBtn = (Button) findViewById(R.id.travelInfoRailTimesBtn);
         railTimesBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                launchActivity("Live Rail Departures");
             }
         });
 
