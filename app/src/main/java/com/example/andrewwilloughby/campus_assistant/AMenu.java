@@ -83,7 +83,7 @@ public abstract class AMenu extends AppCompatActivity {
             case "campus maps":
                 intent = new Intent(this, CampusMapsMenu.class);
                 break;
-            case "Live Rail Departures":
+            case "rail departures":
                 intent = new Intent(this, RailDepartures.class);
                 break;
             default:

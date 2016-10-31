@@ -12,12 +12,6 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.twitter.sdk.android.core.Callback;
-import com.twitter.sdk.android.core.Result;
-import com.twitter.sdk.android.core.TwitterException;
-import com.twitter.sdk.android.core.models.Tweet;
-import com.twitter.sdk.android.tweetui.TimelineResult;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,7 +35,7 @@ public class RailDepartures extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rail_departures);
 
-        setTitle("Live Rail Information");
+        setTitle("Live Rail Departures: Reading (RDG)");
 
         departureList = new ArrayList<>();
 

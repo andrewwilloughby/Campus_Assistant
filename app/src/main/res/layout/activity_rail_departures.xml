@@ -11,25 +11,25 @@ android:paddingRight="0dp"
 android:paddingTop="0dp"
 tools:context="com.example.andrewwilloughby.campus_assistant.RailDepartures">
 
-<LinearLayout
+    <LinearLayout
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_weight="1"
-        android:textAlignment="center"
-        android:textColor="@color/TextWhite"
-        android:textStyle="normal|bold"
-        tools:text="@string/trainDepHeaderText"
-        android:visibility="visible"
-        android:id="@+id/trainHeaderTextView"
-        android:elevation="21dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/TextWhite"
+            android:id="@+id/trainHeaderTextView"
+            android:elevation="21dp"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/trainDepHeaderText" />
+    </LinearLayout>
 
-</LinearLayout>
     <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/rail_swipe_layout"
         android:layout_width="match_parent"

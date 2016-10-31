@@ -113,10 +113,7 @@ public class MainActivity extends AMenu {
             }
         });
 
-        for(String item : menu_categories){
-            menuCategory.add(item);
-        }
-
+        for(String item : menu_categories){ menuCategory.add(item);}
         for(String item : studentInfoItems){  studentInfoItemsList.add(item); }
         for(String item : latestNewsItems){ latestNewsItemsList.add(item); }
         for(String item : campusNavigationItems){ campusNavigationItemsList.add(item); }
@@ -171,8 +168,10 @@ public class MainActivity extends AMenu {
                         launchWebView(selected);
                         break;
                     case "Live Bus Times":
+                        Toast.makeText(getApplicationContext(), "This functionality hasn't been implemented.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Live Train Times":
+                        launchActivity("rail departures");
                         break;
                     case "University Bus Timetable":
                         launchWebView(selected);
