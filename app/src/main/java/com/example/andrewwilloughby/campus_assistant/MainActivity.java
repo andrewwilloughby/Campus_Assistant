@@ -1,6 +1,5 @@
 package com.example.andrewwilloughby.campus_assistant;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -56,14 +55,14 @@ public class MainActivity extends AMenu {
 
         viewStyleBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                if(MENU_MODE == 1){
+                if(getMENU_MODE() == 1){
                     viewStyleBtn.setImageResource(R.drawable.grid_icon);
                     gridLayout.setVisibility(View.GONE);
                     expList.setVisibility(View.VISIBLE);
-                    MENU_MODE = 2;
-                } else if(MENU_MODE == 2){
+                    setMENU_MODE(2);
+                } else if(getMENU_MODE() == 2){
                     viewStyleBtn.setImageResource(R.drawable.list_icon);
-                    MENU_MODE = 1;
+                    setMENU_MODE(1);
                     gridLayout.setVisibility(View.VISIBLE);
                     expList.setVisibility(View.GONE);
                 }
@@ -114,10 +113,7 @@ public class MainActivity extends AMenu {
             }
         });
 
-        for(String item : menu_categories){
-            menuCategory.add(item);
-        }
-
+        for(String item : menu_categories){ menuCategory.add(item);}
         for(String item : studentInfoItems){  studentInfoItemsList.add(item); }
         for(String item : latestNewsItems){ latestNewsItemsList.add(item); }
         for(String item : campusNavigationItems){ campusNavigationItemsList.add(item); }
@@ -172,8 +168,10 @@ public class MainActivity extends AMenu {
                         launchWebView(selected);
                         break;
                     case "Live Bus Times":
+                        Toast.makeText(getApplicationContext(), "This functionality hasn't been implemented.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Live Train Times":
+                        launchActivity("rail departures");
                         break;
                     case "University Bus Timetable":
                         launchWebView(selected);

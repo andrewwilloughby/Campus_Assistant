@@ -138,7 +138,7 @@
                     android:id="@+id/mainLatestNewsBtn"
                     android:layout_weight="1"
                     android:textSize="12sp"
-                    android:background="@android:color/darker_gray"
+                    android:background="@color/LatestNewsColor"
                     android:layout_marginLeft="2.5dp"
                     android:textAllCaps="false"
                     android:elevation="4dp"

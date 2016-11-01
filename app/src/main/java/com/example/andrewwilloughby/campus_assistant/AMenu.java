@@ -1,6 +1,5 @@
 package com.example.andrewwilloughby.campus_assistant;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -35,13 +34,13 @@ public abstract class AMenu extends AppCompatActivity {
         viewStyleBtn = (ImageButton) findViewById(R.id.viewStyleBtn);
         viewStyleBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                if(MENU_MODE == 1){
+                if(getMENU_MODE() == 1){
                     viewStyleBtn.setImageResource(R.drawable.grid_icon);
-                    MENU_MODE = 2;
+                    setMENU_MODE(2);
                     launchActivity("main menu");
-                } else if(MENU_MODE == 2){
+                } else if(getMENU_MODE() == 2){
                     viewStyleBtn.setImageResource(R.drawable.list_icon);
-                    MENU_MODE = 1;
+                    setMENU_MODE(1);
                 }
             }
         });
@@ -83,6 +82,9 @@ public abstract class AMenu extends AppCompatActivity {
                 break;
             case "campus maps":
                 intent = new Intent(this, CampusMapsMenu.class);
+                break;
+            case "rail departures":
+                intent = new Intent(this, RailDepartures.class);
                 break;
             default:
                 //Error.
@@ -129,6 +131,9 @@ public abstract class AMenu extends AppCompatActivity {
             case "University Email":
                 url = "http://mail.live.reading.ac.uk/";
                 break;
+            case "Live Rail Departures":
+                url = "http://transportapi.com/v3/uk/train/station/RDG/live.json?app_id=03bf8009&app_key=d9307fd91b0247c607e098d5effedc97&darwin=false&train_status=passenger";
+                break;
         }
 
         intent.putExtra("webpageURL", url);
@@ -136,5 +141,11 @@ public abstract class AMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
+    protected int getMENU_MODE(){
+        return MENU_MODE;
+    }
 
+    protected void setMENU_MODE(int value){
+        MENU_MODE = value;
+    }
 }
